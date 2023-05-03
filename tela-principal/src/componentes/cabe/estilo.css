@@ -1,0 +1,33 @@
+.cabecalho{
+    display: flex;
+    position: relative;
+    width: 100%;
+    background:white;
+    align-items: flex-start;
+}
+.app-header{
+    width: 100%;
+    position:absolute;
+    display:flex;
+    background:yellow;
+    justify-content:space-around;
+}
+
+.titulos{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+.titulos li{
+    padding-left: 100px;
+    
+}
+
+.icones{
+    list-style: none;
+    display: flex;
+    
+}
+.icones li{
+    padding-left: 50px;
+}

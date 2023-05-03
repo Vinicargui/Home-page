@@ -1,0 +1,10 @@
+.App-principal{
+    width: 100vw;
+    height: 100vh;
+    background: red;
+}
+
+.App-header{
+    width: 100vw;
+    background-color: aqua;
+}
