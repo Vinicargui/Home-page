@@ -1,5 +1,5 @@
 import './App.css'
-import Principal from './componentes/cabe'
+import Principal from './componentes/home'
 function App() {
   return (
      <div className='App-principal'>
