@@ -1,13 +1,11 @@
 import './App.css'
-import Principal from './componentes/home'
-function App() {
+function Home() {
   return (
      <div className='App-principal'>
           <header className='App-header'>
-            <Principal></Principal>
           </header>
      </div>
   )
 }
 
-export default App;
+export default Home;

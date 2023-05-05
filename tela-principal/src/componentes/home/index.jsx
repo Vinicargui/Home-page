@@ -2,6 +2,7 @@ import "./estilo.css";
 import perfil from "../../imagens/usuario.ico";
 import sair from "../../imagens/sair.ico";
 import logo from "../../imagens/logo.png";
+import { Link } from "react-router-dom";
 
 function Principal() {
   return (
@@ -12,9 +13,15 @@ function Principal() {
         </div>
 
         <ul className="titulos">
-          <li>Home</li>
-          <li>Publicações</li>
-          <li>Cadastro</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/publicacao">
+            <li>Publicações</li>
+          </Link>
+          <Link to='/cadastro'>
+            <li>Cadastro</li>
+          </Link>
         </ul>
 
         <ul className="icones">
