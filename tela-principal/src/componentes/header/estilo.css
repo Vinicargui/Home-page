@@ -5,6 +5,7 @@
     background:white;
     align-items: flex-start;
     align-content: center;
+    position: fixed;
 }
 .app-header{
     width: 100%;
@@ -34,9 +35,6 @@
      
 }
 
-Link {
-    text-decoration: none;
-}
 
 .titulos li:hover{
     transition: 0.5s;
@@ -52,4 +50,9 @@ Link {
 .icones li{
     padding-left: 50px;
     
+}
+
+.link{
+    text-decoration: none;
+    color: aliceblue;
 }

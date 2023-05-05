@@ -6,7 +6,7 @@ import Publicacao from '../componentes/publicacao';
 function publicacao() {
   return (
     <div className='AppContainer'>
-           <Publicacao></Publicacao>
+           <Publicacao/>
     </div>
   );
 }

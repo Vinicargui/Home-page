@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     background: red;
+    flex-wrap: wrap;
 }
 
 .App-header{
@@ -12,5 +13,5 @@
 .AppContainer{
     width: 100vw;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: aliceblue;
 }

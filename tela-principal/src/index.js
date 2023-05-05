@@ -4,7 +4,7 @@ import './index.css';
 import Home from './rotas/Home';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Principal from './componentes/home';
+import Header from './componentes/header';
 import Cadastro from './rotas/Cadastro';
 import Publicacao from './componentes/publicacao';
 
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Principal></Principal> 
+    <Header/>  
     <Routes>
        <Route path='/cadastro' element={<Cadastro/>} />
        <Route path='/publicacao' element={<Publicacao/>} />

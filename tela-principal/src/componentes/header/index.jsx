@@ -4,7 +4,9 @@ import sair from "../../imagens/sair.ico";
 import logo from "../../imagens/logo.png";
 import { Link } from "react-router-dom";
 
-function Principal() {
+
+
+function Header() {
   return (
     <div className="cabecalho">
       <header className="app-header">
@@ -13,13 +15,13 @@ function Principal() {
         </div>
 
         <ul className="titulos">
-          <Link to="/">
+          <Link className="link" to="/">
             <li>Home</li>
           </Link>
-          <Link to="/publicacao">
+          <Link className="link" to="/publicacao">
             <li>Publicações</li>
           </Link>
-          <Link to='/cadastro'>
+          <Link className="link" to='/cadastro'>
             <li>Cadastro</li>
           </Link>
         </ul>
@@ -35,4 +37,4 @@ function Principal() {
   );
 }
 
-export default Principal;
+export default Header;
