@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Header/>  
+    <Header className="nav-bar"/>  
     <Routes>
        <Route path='/cadastro' element={<Cadastro/>} />
        <Route path='/publicacao' element={<Publicacao/>} />

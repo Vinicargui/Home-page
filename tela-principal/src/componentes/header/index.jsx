@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="cabecalho">
+    
+    <div className="nav-bar cabecalho" >
+
       <header className="app-header">
         <div className="logo">
           <img src={logo} alt="" />

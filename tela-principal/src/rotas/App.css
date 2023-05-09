@@ -11,7 +11,12 @@
 }
 
 .AppContainer{
-    width: 100vw;
+  width: 100vw;
   height: 100vh;
-  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+  background-color: rgb(145, 142, 142);
+ 
 }

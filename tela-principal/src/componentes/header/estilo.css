@@ -1,6 +1,5 @@
 .cabecalho{
     display: flex;
-    position: relative;
     width: 100%;
     background:white;
     align-items: flex-start;
@@ -9,7 +8,6 @@
 }
 .app-header{
     width: 100%;
-    position:absolute;
     display:flex;
     background:black;
     justify-content:space-around;

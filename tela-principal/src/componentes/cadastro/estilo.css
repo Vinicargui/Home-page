@@ -1,11 +1,113 @@
-.titulo{
-    color: aliceblue;
+label{
+    font-weight: bold;
+    font-size: 15px;
 }
 
-.form-cadastro{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    color: rgb(15, 15, 15);
+h1{
+    color: white;
 }
+
+.titulo{
+padding: 0 10px;
+
+}
+
+.titulo label{
+    color: rgb(5, 5, 5);
+    padding-right:5px ;
+}
+
+.containerCadastro{
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  
+}
+
+ .formulario{
+    width: 100vw;
+    padding: 0 450px 0;
+    
+    /* margin: 0px 500px 0; */
+    /* align-items: center;
+    align-content: center; */
+
+
+} 
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px 20px;
+}
+
+.foto{
+padding:0px 10px 20px;
+}
+
+.foto input{
+    padding: 5px;
+}
+
+.valor{
+display: flex;
+padding:0px 10px 20px;
+
+}
+
+.valor label{
+    color: rgb(5, 5, 5);
+    padding-right:5px ;
+}
+
+.descricao{
+    display: flex;
+    padding:0px 10px 20px;
+    flex-direction: column;
+}
+
+.campo{
+    width: 20vw;
+    height: 15vh;
+}
+
+.campo:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+
+.botaoForm{
+    width: 250px; 
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(151, 37, 94);
+}
+
+ .btn{
+   border: none;
+   padding: 20px 80px 20px;
+   border-radius: 8px;
+   background-color:#7b68ee;
+   cursor: pointer;
+   font-size: 15px;
+   margin: 0 10px 0px;
+   font-weight: bold;
+    
+}
+
+.btn:hover{
+    transition: 0.5s;
+    background-color:#0000CD;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
