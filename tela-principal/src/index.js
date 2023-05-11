@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Header from './componentes/header';
 import Cadastro from './rotas/Cadastro';
-import Publicacao from './componentes/publicacao';
+import Publicacao from './rotas/publicacao';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

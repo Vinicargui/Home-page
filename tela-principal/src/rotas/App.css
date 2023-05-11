@@ -10,7 +10,7 @@
     background-color: aqua;
 }
 
-.AppContainer{
+.cadastroContainer{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -18,5 +18,27 @@
   align-content: center;
   margin-top: 100px;
   background-color: rgb(145, 142, 142);
+ 
+}
+
+.homeContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+  background-color: rgb(138, 14, 14);
+ 
+}
+
+.publicacaoContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+  background-color: rgb(31, 29, 29);
  
 }

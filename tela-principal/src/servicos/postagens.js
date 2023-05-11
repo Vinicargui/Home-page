@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const postagensApi = axios.create({
-  baseURL: "http://localhost:5000/telaprincipal",
+const produtoApi = axios.create({
+  baseURL: "http://localhost:3000/produto",
 });
 
-function getPostagens() {
-  const response = postagensApi.get("/");
+function postProduto() {
+  const response = produtoApi.post("/");
   return response.data;
 }
 
-export { getPostagens };
+export { postProduto};

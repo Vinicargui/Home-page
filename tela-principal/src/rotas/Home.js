@@ -6,7 +6,7 @@ import HomePage from '../componentes/home';
 function Home() {
   return (
 
-     <div className='App-principal'>
+     <div className='homeContainer'>
           <HomePage></HomePage>
      </div>
   )
