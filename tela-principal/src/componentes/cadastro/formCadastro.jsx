@@ -1,32 +1,77 @@
 import { useState } from "react";
 import axios from "axios";
 import "./estilo.css";
-import { useNavigate } from 'react-router-dom'
-
+// import { useNavigate } from "react-router-dom";
 
 function FormCadastro() {
   const [titulo, setTitulo] = useState("");
   const [categoria, setCategoria] = useState("");
-  const [imagem, setImagem] = useState("");
+  const [image, setImagem] = useState("");
   const [valor, setValor] = useState("");
   const [descricao, setDescricao] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log("conectando");
+
+    if (
+      titulo === "" ||
+      categoria === "" ||
+      image === "" ||
+      valor === "" ||
+      descricao === ""
+    ) {
+      alert("Preencha todos os dados!");
+    }
+
+    const produto = {
+      titulo,
+      categoria,
+      image,
+      valor,
+      descricao,
+    };
+
+    // const formData = new FormData();
+    // formData.append("imagem", image);
+    // formData.append("titulo", titulo);
+    // formData.append("categoria", categoria);
+    // formData.append("valor", valor);
+    // formData.append("descricao", descricao);
+
+    // const headers = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // };
+
     try {
-      const produto = {
-        titulo: titulo,
-        categoria: categoria,
-        imagem: imagem,
-        valor: valor,
-        descricao: descricao,
-      };
-     const response = await axios.post("http://localhost:3001/produto", produto);
-     console.log(await response);
-  
+      await axios.post("http://localhost:3001/produto", produto);
+      // headers: {
+      //   "Content-Type": "multipart/form-data",
+      // },
+      console.log("Produto enviado com sucesso!");
     } catch (error) {
       console.log(error);
     }
+
+    // try {
+    //   const produto = {
+    //     titulo: titulo,
+    //     imagem: image,
+    //     categoria: categoria,
+    //     valor: valor,
+    //     descricao: descricao,
+    //   };
+    //   const response = await axios.post(
+    //     "http://localhost:3001/produto",
+    //    formData
+    //   );
+    //   console.log(produto);
+    //   await response;
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -76,10 +121,16 @@ function FormCadastro() {
             </div>
           </div>
 
-          {/* <div className="foto">
-          <label htmlFor="" className="imagem">Imagem</label>
-          <input type="file" name="imagem" onChange={(e) => setImagem(e.target.value)} />
-        </div> */}
+          <div className="foto">
+            <label htmlFor="" className="imagem">
+              Imagem
+            </label>
+            <input
+              type="file"
+              name="image"
+              onChange={(e) => setImagem(e.target.files[0])}
+            />
+          </div>
 
           <div className="valor">
             <label htmlFor="">Valor</label>

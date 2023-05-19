@@ -4,26 +4,22 @@ import sair from "../../imagens/sair.ico";
 import logo from "../../imagens/logo.png";
 import { Link } from "react-router-dom";
 
-
-
 function Header() {
   return (
-    
-    <div className="nav-bar cabecalho" >
-
+    <div className="nav-bar cabecalho">
       <header className="app-header">
         <div className="logo">
           <img src={logo} alt="" />
         </div>
 
         <ul className="titulos">
-          <Link className="link" to="/">
+          {/* <Link className="link" to="/">
             <li>Home</li>
-          </Link>
+          </Link> */}
           <Link className="link" to="/publicacao">
             <li>Publicações</li>
           </Link>
-          <Link className="link" to='/cadastro'>
+          <Link className="link" to="/cadastro">
             <li>Cadastro</li>
           </Link>
         </ul>
