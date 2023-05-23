@@ -13,6 +13,7 @@ function FormCadastro() {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log("conectando");
+    console.log(image);
 
     if (
       titulo === "" ||
@@ -32,46 +33,25 @@ function FormCadastro() {
       descricao,
     };
 
-    // const formData = new FormData();
-    // formData.append("imagem", image);
+    const formData = new FormData();
+    formData.append("image", image);
     // formData.append("titulo", titulo);
     // formData.append("categoria", categoria);
     // formData.append("valor", valor);
     // formData.append("descricao", descricao);
 
-    // const headers = {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // };
+    const headers = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
 
     try {
-      await axios.post("http://localhost:3001/produto", produto);
-      // headers: {
-      //   "Content-Type": "multipart/form-data",
-      // },
+      await axios.post("http://localhost:3001/produto", produto, formData);
       console.log("Produto enviado com sucesso!");
     } catch (error) {
       console.log(error);
     }
-
-    // try {
-    //   const produto = {
-    //     titulo: titulo,
-    //     imagem: image,
-    //     categoria: categoria,
-    //     valor: valor,
-    //     descricao: descricao,
-    //   };
-    //   const response = await axios.post(
-    //     "http://localhost:3001/produto",
-    //    formData
-    //   );
-    //   console.log(produto);
-    //   await response;
-    // } catch (error) {
-    //   console.log(error);
-    // }
   }
   return (
     <form onSubmit={handleSubmit}>

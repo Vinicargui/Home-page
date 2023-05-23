@@ -34,7 +34,7 @@ function Publicacao() {
     console.log(e.target.id);
     console.log(produtos);
   }
-  console.log(produtos.imagem);
+  // console.log(produtos.imagem);
   return (
     <div className="publicacaoContainer">
       {produtos.length > 0 &&
