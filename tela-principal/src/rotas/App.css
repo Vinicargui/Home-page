@@ -42,3 +42,9 @@
  
  
 }
+
+/* @media screen and (max-width:900px) {
+  .publicacaoContainer{
+    flex-wrap: wrap;
+  }
+} */

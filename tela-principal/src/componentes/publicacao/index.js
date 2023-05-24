@@ -14,10 +14,10 @@ function PublicacaoPage({
   return (
     <div className="produto-card">
       <h4>{titulo}</h4>
-      <p>
-        <span>Categoria:</span> {categoria}
-      </p>
-      <img height={"150px"} width={"150px"} src={imagem} />
+      <div className="imagem">
+        <img src={imagem} />
+      </div>
+      <span>Categoria:</span> {categoria}
       <p>
         <span>Valor:</span> R${valor}
       </p>

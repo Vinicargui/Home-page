@@ -33,28 +33,19 @@ function FormCadastro() {
       descricao,
     };
 
-    const formData = new FormData();
-    formData.append("image", image);
-    // formData.append("titulo", titulo);
-    // formData.append("categoria", categoria);
-    // formData.append("valor", valor);
-    // formData.append("descricao", descricao);
-
-    const headers = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
     try {
-      await axios.post("http://localhost:3001/produto", produto, formData);
+      await axios.post("http://localhost:3001/produto", produto, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       console.log("Produto enviado com sucesso!");
     } catch (error) {
       console.log(error);
     }
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} enctype="multipart/form-data">
       <div className="containerCadastro">
         <div className="formulario">
           <h1>Cadastrar novos produtos</h1>
@@ -115,7 +106,7 @@ function FormCadastro() {
           <div className="valor">
             <label htmlFor="">Valor</label>
             <input
-              type="text"
+              type="number"
               name="valor"
               onChange={(e) => setValor(e.target.value)}
             />
