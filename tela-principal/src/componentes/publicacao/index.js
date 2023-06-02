@@ -28,7 +28,7 @@ function PublicacaoPage({
         </div>
       </p>
       <div className="action">
-        <Link to="/">
+        <Link to={`/${id}`}>
           <BsPencil />
         </Link>
         <button onClick={handleRemove} id={id}>

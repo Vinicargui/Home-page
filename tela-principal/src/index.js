@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Home from "./rotas/Home";
+import Edicao from "./rotas/Editar";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./componentes/header";
@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/publicacao" element={<Publicacao />} />
-        {/* <Route path='/' element={<Home/>} /> */}
+        <Route path="/:id" element={<Edicao />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

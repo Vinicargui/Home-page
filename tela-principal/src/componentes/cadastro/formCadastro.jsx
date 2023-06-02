@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import "./estilo.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import loading from "../layout/loding";
 
 function FormCadastro() {
   const [titulo, setTitulo] = useState("");
@@ -9,6 +11,7 @@ function FormCadastro() {
   const [image, setImagem] = useState("");
   const [valor, setValor] = useState("");
   const [descricao, setDescricao] = useState("");
+  const navegate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -39,7 +42,8 @@ function FormCadastro() {
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log("Produto enviado com sucesso!");
+      navegate("/publicacao");
+      // console.log("Produto enviado com sucesso!");
     } catch (error) {
       console.log(error);
     }
@@ -118,7 +122,7 @@ function FormCadastro() {
               name="descricao"
               id=""
               cols="30"
-              rows="10"
+              rows="5"
               className="descricao"
               onChange={(e) => setDescricao(e.target.value)}
             ></textarea>

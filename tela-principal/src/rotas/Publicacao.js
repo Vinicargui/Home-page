@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import PublicacaoPage from "../componentes/publicacao";
 import axios from "axios";
+import Loading from "../componentes/layout/loding";
 
 function Publicacao() {
   const [produtos, setProdutos] = useState([]);
+  const [removeload, setLoad] = useState(false);
 
   const getProdutos = async () => {
     try {
@@ -13,6 +15,7 @@ function Publicacao() {
       if (produtosServidor !== produtos) {
         setProdutos(produtosServidor);
       }
+      setLoad(true);
     } catch (error) {
       console.log();
     }
