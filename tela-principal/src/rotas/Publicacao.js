@@ -52,6 +52,7 @@ function Publicacao() {
             handleRemove={Deletar}
           />
         ))}
+        
     </div>
   );
 }

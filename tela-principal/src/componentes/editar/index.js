@@ -39,12 +39,6 @@ function FormAtualizar() {
       await axios.patch(`http://localhost:3001/${id}`, produto);
       navegate("/publicacao");
 
-      //    {
-      //     headers: {
-      //       "Content-Type": "multipart/form-data",
-      //     },
-      //   });
-      //   console.log("Produto enviado com sucesso!");
     } catch (error) {
       console.log(error);
     }
